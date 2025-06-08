@@ -9,13 +9,13 @@ O projeto consiste no consumo de uma API de criptomoedas para exibição de dive
 O projeto foi desenvolvido tendo em mente a arquitetura MVVM, com as seguintes camadas:
 
 *   **Data:**
-    *   `DataSource`: Responsável por fazer a requisição para a API.
-    *   `Repository`: Processa a resposta da requisição.
+    *   `DataSource (coinmarket_source.dart)`: Responsável por fazer a requisição para a API.
+    *   `Repository (coin_repository.dart)`: Processa a resposta da requisição.
 *   **Domain:**
-    *   Possui a entidade `Coin` para modelagem da resposta da API.
+    *   Possui a entidade `Coin (coin_entity.dart)` para modelagem da resposta da API.
 *   **UI:**
-    *   `View`: Consiste na tela com os widgets.
-    *   `ViewModel`: Possui a lógica com o controle de estado.
+    *   `View (coins_view.dart)`: Consiste na tela com os widgets.
+    *   `ViewModel (coins_viewmodel.dart)`: Possui a lógica com o controle de estado.
 
 ## Execução
 
