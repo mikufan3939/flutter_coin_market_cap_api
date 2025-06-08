@@ -1,2 +1,3 @@
-# flutter_coin_market_cap_api
-Atividade Prática Programação para Dispositivos Móveis
+# coin_market_api1
+
+A new Flutter project.
