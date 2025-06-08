@@ -15,7 +15,7 @@ O projeto foi desenvolvido tendo em mente a arquitetura MVVM, com as seguintes c
     *   Possui a entidade `Coin (coin_entity.dart)` para modelagem da resposta da API.
 *   **UI:**
     *   `View (coins_view.dart)`: Consiste na tela com os widgets.
-    *   `ViewModel (coins_viewmodel.dart)`: Possui a lógica com o controle de estado.
+    *   `ViewModel (coins_viewmodel.dart)`: Possui a lógica com o controle de estado utilizando GetX.
 
 ## Execução
 
