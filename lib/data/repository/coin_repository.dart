@@ -1,5 +1,4 @@
 import 'dart:developer';
-
 import 'package:coin_market_api1/data/datasource/coinmarket_source.dart';
 import 'package:coin_market_api1/domain/entities/coin/coin_entity.dart';
 
@@ -26,12 +25,22 @@ final class CoinRepository {
         if (coinUsdList is List && coinUsdList.isNotEmpty && coinBrlList is List && coinBrlList.isNotEmpty) {
           final coinUsd = coinUsdList[0];
           final coinBrl = coinBrlList[0];
+
+          // Parse the date string
+          DateTime? dateAdded = DateTime.tryParse(coinUsd["date_added"] ?? "");
+
+          // Format the date if it's valid
+          String formattedDate = dateAdded != null
+              ? "${dateAdded.day.toString().padLeft(2, '0')}/${dateAdded.month.toString().padLeft(2, '0')}/${dateAdded.year}"
+              : "N/A";
+
           result.add(
             CoinEntity(
-              symbol: coinUsd['symbol'],
-              name: coinUsd['name'],
-              usd: (coinUsd['quote']?['USD']?['price'] as num?)?.toDouble() ?? 0.0,
-              brl: (coinBrl['quote']?['BRL']?['price'] as num?)?.toDouble() ?? 0.0,
+              symbol: coinUsd["symbol"],
+              name: coinUsd["name"],
+              usd: (coinUsd["quote"]?["USD"]?["price"] as num?)?.toDouble() ?? 0.0,
+              brl: (coinBrl["quote"]?["BRL"]?["price"] as num?)?.toDouble() ?? 0.0,
+              dateAdded: formattedDate, // Use the formatted date
             ),
           );
         }

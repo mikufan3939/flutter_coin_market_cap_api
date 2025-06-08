@@ -76,7 +76,7 @@ class CoinsView extends StatelessWidget {
                   child: TextField(
                     controller: searchController,
                     decoration: const InputDecoration(
-                      labelText: "Siglas (ex: BTC,ETH)",
+                      labelText: "ex: BTC,ETH,SOL",
                       border: OutlineInputBorder(),
                     ),
                     onChanged: (value) => searchSymbols.value = value,
@@ -147,7 +147,8 @@ class CoinsView extends StatelessWidget {
                               final coin = coinsViewModel.coins[index];
                               return ListTile(
                                 title: Text(coin.name),
-                                subtitle: Text(coin.symbol),
+                                subtitle: Text(
+                                    "${coin.symbol}\nUSD: \$${coin.usd.toStringAsFixed(2)} | BRL: R\$${coin.brl.toStringAsFixed(2)}"),
                                 onTap: () {
                                   showDialog(
                                     context: context,
@@ -158,13 +159,14 @@ class CoinsView extends StatelessWidget {
                                         children: [
                                           Text("USD: \$${coin.usd.toStringAsFixed(2)}"),
                                           Text("BRL: R\$${coin.brl.toStringAsFixed(2)}"),
+                                          Text("Date Added: ${coin.dateAdded}"), // Add this line
                                         ],
                                       ),
                                       actions: [
                                         ElevatedButton(
                                           onPressed: () => Navigator.of(context).pop(),
                                           style: ElevatedButton.styleFrom(
-                                            backgroundColor: const Color(0xFFF6D97A), // Softer Meowth gold
+                                            backgroundColor: const Color(0xFFF6D97A),
                                             foregroundColor: Colors.black,
                                             shape: RoundedRectangleBorder(
                                               borderRadius: BorderRadius.circular(8),
