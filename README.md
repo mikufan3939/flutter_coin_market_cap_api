@@ -22,7 +22,7 @@ O projeto foi desenvolvido tendo em mente a arquitetura MVVM, com as seguintes c
 Para executar o projeto, siga os seguintes passos:
 
 1.  Execute `flutter pub get` na raíz do projeto para instalação de dependências.
-2.  Use `flutter run` com um emulador para rodar o projeto, pois a execução em navegador previne o CrossOrigin necessário para conexão com a API.
+2.  Use `flutter run` com um emulador para instalar o projeto como Apk, pois a execução em navegador previne o CrossOrigin necessário para conexão com a API.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d16ea02c-e78e-4d4f-a172-1445fb5ffa46" width="300">
