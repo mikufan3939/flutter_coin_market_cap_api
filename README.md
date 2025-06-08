@@ -23,3 +23,8 @@ Para executar o projeto, siga os seguintes passos:
 
 1.  Execute `flutter pub get` na raíz do projeto para instalação de dependências.
 2.  Use `flutter run` com um emulador para rodar o projeto, pois a execução em navegador previne o CrossOrigin necessário para conexão com a API.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d16ea02c-e78e-4d4f-a172-1445fb5ffa46" width="300">
+  <img src="https://github.com/user-attachments/assets/0248557c-b905-4c8c-8d78-6185071c434a" width="300">
+</p>
